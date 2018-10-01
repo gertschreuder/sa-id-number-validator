@@ -17,6 +17,21 @@
 				<version>1.6.0</version>
 				<executions>
 					<execution>
+						<id>setuptools pycodestyle</id>
+						<phase>test</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>pycodestyle</executable>
+							<arguments>
+								<argument>.\tests\test_validator.py</argument>
+								<argument>.\src\validator.py</argument>
+								<argument>.\src\resources\setup.py</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
 						<id>setuptools test</id>
 						<phase>test</phase>
 						<goals>
@@ -25,7 +40,7 @@
 						<configuration>
 							<executable>python</executable>
 							<arguments>
-								<argument>${basedir}\src\resources\setup.py</argument>
+								<argument>.\src\resources\setup.py</argument>
 								<argument>nosetests</argument>
 								<argument>--with-coverage</argument>
 							</arguments>

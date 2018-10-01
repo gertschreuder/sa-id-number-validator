@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# coding=utf-8
+
 import unittest
 import json
 import os
@@ -8,6 +11,7 @@ class ValidatorTests(unittest.TestCase):
 
     def setUp(self):
         pass
+
     def test_validatorNone(self):
         validator = Validator()
         validator.validate(None)
@@ -51,6 +55,7 @@ class ValidatorTests(unittest.TestCase):
 
     def tearDown(self):
         pass
+
 
 if __name__ == '__main__':
     unittest.main(exit=False)
